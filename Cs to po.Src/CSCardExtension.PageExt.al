@@ -1,4 +1,4 @@
-pageextension 600000 "CS Card Extension" extends 70801697
+pageextension 600000 "CS Card Extension" extends "D01 Purch. Quote Comparison"
 {
     actions
     {
@@ -34,6 +34,34 @@ pageextension 600000 "CS Card Extension" extends 70801697
                         CSWorkflowMgt: Codeunit "CS Workflow Management";
                     begin
                         CSWorkflowMgt.OnCancelCSForApproval(Rec);
+                    end;
+                }
+
+                action(ApproveRequest)
+                {
+                    Caption = 'Approve';
+                    ApplicationArea = All;
+                    Image = Approve;
+
+                    trigger OnAction()
+                    var
+                        CSWorkflowMgt: Codeunit "CS Workflow Management";
+                    begin
+                        CSWorkflowMgt.OnApproveCSForApproval(Rec);
+                    end;
+                }
+
+                action(RejectRequest)
+                {
+                    Caption = 'Reject';
+                    ApplicationArea = All;
+                    Image = Reject;
+
+                    trigger OnAction()
+                    var
+                        CSWorkflowMgt: Codeunit "CS Workflow Management";
+                    begin
+                        CSWorkflowMgt.OnRejectCSForApproval(Rec);
                     end;
                 }
             }
