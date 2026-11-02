@@ -1,0 +1,38 @@
+{
+  "id": "21120aa9-4b1a-45ac-b7fc-4423083542c9",
+  "name": "ALProject1",
+  "publisher": "Default Publisher",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "acaddf74-b981-44b6-b275-43cebf9621c1",
+      "name": "Dhyey Indent Management",
+      "publisher": "Dhyey Consulting Services Pvt. Ltd.",
+      "version": "1.1.3.0"
+    }
+  ],
+  "screenshots": [],
+  "application": "24.0.0.0",
+  "idRanges": [
+    {
+      "from": 600000,
+      "to": 600099
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "13.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
